@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Social Media Analytics — VALUE CODERS — SIH26152">
+<title>Social Media Analytics | VALUE CODERS</title>
+<style>
+:root{--bg:#f5f7fb;--surface:#fff;--surface2:#f8fafc;--ink:#101828;--muted:#667085;--line:#e4e7ec;--brand:#2563eb;--brand2:#1d4ed8;--brandSoft:#eff6ff;--green:#12b76a;--red:#f04438;--amber:#f79009;--nav:#0b1220;--nav2:#111b2e;--shadow:0 10px 30px rgba(16,24,40,.07);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:260px;background:linear-gradient(180deg,var(--nav),#0e1728);color:#fff;padding:22px 16px;z-index:30;overflow:auto}.brand{display:flex;gap:11px;align-items:center;padding:4px 8px 22px}.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#7c3aed);display:grid;place-items:center;font-weight:900}.brand h1{font-size:15px;margin:0}.brand small{display:block;color:#98a2b3;font-size:11px;margin-top:2px}.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#667085;padding:0 10px 8px}.nav button{width:100%;border:0;background:transparent;color:#b8c1d1;text-align:left;padding:12px 12px;border-radius:10px;cursor:pointer;margin:2px 0;transition:.18s}.nav button:hover{background:rgba(255,255,255,.06);color:#fff}.nav button.active{background:#1d4ed8;color:#fff;box-shadow:0 7px 18px rgba(37,99,235,.25)}.sidebar-foot{margin:28px 8px 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);color:#98a2b3;font-size:11px;line-height:1.55}.main{margin-left:260px;min-height:100vh}.topnav{height:72px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:20}.mobile-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;cursor:pointer}.crumb{font-size:13px;color:var(--muted)}.crumb strong{color:var(--ink)}.status{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #dcfae9}.content{padding:30px;max-width:1500px;margin:auto}.page{display:none;animation:fade .18s ease}.page.active{display:block}@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}.hero{background:linear-gradient(135deg,#102a56,#1d4ed8);color:#fff;border-radius:20px;padding:26px 28px;margin-bottom:20px;box-shadow:0 18px 40px rgba(29,78,216,.18)}.hero h2{margin:0 0 7px;font-size:27px}.hero p{margin:0;color:#dbeafe;max-width:780px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#bfdbfe;margin-bottom:8px;font-weight:800}.section-title{font-size:23px;font-weight:800;margin:0 0 16px}.section-sub{color:var(--muted);font-size:13px;margin:-8px 0 18px}.grid4,.grid3,.grid2{display:grid;gap:14px}.grid4{grid-template-columns:repeat(4,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:repeat(2,1fr)}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}.metric-label{font-size:12px;color:var(--muted);font-weight:700}.metric-value{font-size:28px;font-weight:850;margin:8px 0 3px;letter-spacing:-.02em}.metric-note{font-size:11px;color:var(--muted)}.trend-up{color:var(--green);font-weight:700}.info{padding:12px 14px;background:var(--brandSoft);border:1px solid #bfdbfe;color:#1e40af;border-radius:12px;font-size:12px;margin-bottom:14px}.chart-card h3,.card h3{font-size:14px;margin:0 0 14px}.chart{height:285px;position:relative}.chart svg{width:100%;height:100%;display:block}.legend{font-size:11px;color:var(--muted);margin-top:10px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;font-size:12px}.table th{color:#667085;text-align:left;background:var(--surface2);font-size:10px;text-transform:uppercase;letter-spacing:.05em}.table th,.table td{padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap}.table tbody tr:hover{background:#fafcff}.pill{display:inline-block;padding:4px 8px;background:#eef2ff;color:#3730a3;border-radius:999px;font-size:10px;font-weight:800}.positive{color:var(--green);font-weight:800}.negative{color:var(--red);font-weight:800}.neutral{color:#667085;font-weight:800}.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}.filters{display:flex;gap:8px;flex-wrap:wrap}.select,.input{border:1px solid #d0d5dd;background:#fff;border-radius:10px;padding:9px 11px;outline:0}.select:focus,.input:focus{border-color:#84adff;box-shadow:0 0 0 3px #eff6ff}.btn{border:0;border-radius:10px;padding:10px 14px;background:var(--brand);color:#fff;font-weight:750;cursor:pointer}.btn:hover{background:var(--brand2)}.btn.secondary{background:#fff;color:#344054;border:1px solid #d0d5dd}.btn.danger{background:#fff;color:#b42318;border:1px solid #fecdca}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.field label{display:block;font-size:11px;font-weight:750;color:#475467;margin-bottom:6px}.field .input,.field select{width:100%}.network-wrap{height:410px;position:relative;overflow:hidden;border-radius:14px;background:radial-gradient(circle at 50% 45%,#f8fbff,#eef4ff);border:1px solid #dbe7ff}.network-svg{position:absolute;inset:0;width:100%;height:100%}.node{position:absolute;transform:translate(-50%,-50%);min-width:94px;text-align:center;padding:9px 10px;background:#fff;border:1px solid #bfdbfe;border-radius:12px;box-shadow:0 8px 20px rgba(16,24,40,.1);font-size:11px;font-weight:800}.node small{display:block;color:var(--muted);font-weight:500;margin-top:2px}.score{height:7px;background:#eef2f6;border-radius:999px;overflow:hidden}.score i{display:block;height:100%;background:linear-gradient(90deg,#60a5fa,#2563eb);border-radius:inherit}.empty{text-align:center;padding:30px;color:var(--muted);font-size:13px}.toast{position:fixed;right:24px;bottom:24px;background:#101828;color:#fff;padding:12px 16px;border-radius:10px;font-size:12px;box-shadow:0 12px 28px rgba(0,0,0,.2);opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s;z-index:50}.toast.show{opacity:1;transform:none}.footer{color:#98a2b3;font-size:11px;text-align:center;padding:30px 0 8px}
+@media(max-width:1050px){.grid4{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.sidebar{width:230px}.main{margin-left:230px}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:.2s;width:270px}.sidebar.open{transform:none}.main{margin-left:0}.topnav{padding:0 16px}.mobile-toggle{display:inline-block}.content{padding:18px 14px}.grid2,.grid3,.grid4{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.hero h2{font-size:22px}.topbar{flex-direction:column}.chart{height:245px}.network-wrap{height:360px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">VC</div><div><h1>VALUE CODERS</h1><small>SIH26152 • Social Media Analytics</small></div></div>
+  <div class="nav-label">Analytics</div>
+  <nav class="nav" id="nav"></nav>
+  <div class="sidebar-foot"><b>Smart India Hackathon 2025</b><br>Problem Statement: SIH26152<br>Software • Miscellaneous</div>
+</aside>
+<main class="main">
+<header class="topnav">
+  <div style="display:flex;align-items:center;gap:12px"><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button><div class="crumb">Analytics / <strong id="crumb">Dashboard</strong></div></div>
+  <div class="status"><span class="dot"></span> Local analytics workspace</div>
+</header>
+<div class="content">
+<section class="page active" id="dashboard"></section>
+<section class="page" id="sentiment"></section>
+<section class="page" id="audience"></section>
+<section class="page" id="network"></section>
+<section class="page" id="detailed"></section>
+<section class="page" id="input"></section>
+<div class="footer">VALUE CODERS • SIH26152 • Client-side prototype • Data stays in this browser</div>
+</div>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+"use strict";
+const SAMPLE_ROWS=[
+["2026-01-05","Instagram",8200,24000,2100,180,320,62,18,20,"Product"],
+["2026-01-12","YouTube",5400,18000,1450,110,210,58,22,20,"Video"],
+["2026-01-19","Instagram",8750,27000,2400,205,380,65,16,19,"Product"],
+["2026-01-26","Facebook",4100,12000,950,70,120,52,28,20,"Campaign"],
+["2026-02-02","YouTube",6100,22000,1800,140,260,61,20,19,"Video"],
+["2026-02-09","Instagram",9300,31000,2750,230,410,68,14,18,"Product"],
+["2026-02-16","Facebook",4550,15000,1100,85,150,55,25,20,"Campaign"],
+["2026-02-23","YouTube",6800,25000,2050,155,300,63,19,18,"Video"],
+["2026-03-02","Instagram",10100,36000,3300,290,520,71,12,17,"Product"],
+["2026-03-09","Facebook",4900,17000,1250,95,180,57,24,19,"Campaign"],
+["2026-03-16","YouTube",7350,29000,2400,180,340,66,15,19,"Video"],
+["2026-03-23","Instagram",11000,41000,3900,320,610,74,10,16,"Product"]
+];
+const NAV=[["dashboard","Dashboard"],["sentiment","Sentiment & Trends"],["audience","Audience Insights"],["network","Influence & Network"],["detailed","Detailed Analysis"],["input","Data Input"]];
+let data=loadData();
+let currentPage="dashboard";
+let toastTimer=null;
+
+function row(r){return {date:String(r[0]),platform:String(r[1]),followers:num(r[2]),reach:num(r[3]),likes:num(r[4]),comments:num(r[5]),shares:num(r[6]),positive:num(r[7]),negative:num(r[8]),neutral:num(r[9]),topic:String(r[10])};}
+function num(v){const n=Number(v);return Number.isFinite(n)?n:0;}
+function cloneSample(){return SAMPLE_ROWS.map(row);}
+function loadData(){
+  try{
+    const raw=localStorage.getItem("sma_data");
+    if(!raw)return cloneSample();
+    const parsed=JSON.parse(raw);
+    if(!Array.isArray(parsed)||!parsed.length)return cloneSample();
+    return parsed.map(x=>row([x.date,x.platform,x.followers,x.reach,x.likes,x.comments,x.shares,x.positive,x.negative,x.neutral,x.topic]));
+  }catch(e){return cloneSample();}
+}
+function saveData(){try{localStorage.setItem("sma_data",JSON.stringify(data));}catch(e){showToast("Local storage is unavailable in this browser.");}}
+function fmt(n){return num(n).toLocaleString("en-IN");}
+function sum(key,arr=data){return arr.reduce((a,x)=>a+num(x[key]),0);}
+function engagement(x){return num(x.likes)+num(x.comments)+num(x.shares);}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+function card(label,value,note=""){return `<div class="card"><div class="metric-label">${esc(label)}</div><div class="metric-value">${esc(value)}</div>${note?`<div class="metric-note">${esc(note)}</div>`:""}</div>`;}
+function empty(msg){return `<div class="empty">${esc(msg)}</div>`;}
+function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+function safeMax(arr,fallback=1){const m=Math.max(...arr.map(num),0);return m||fallback;}
+function chartSvg(id,labels,series,opts={}){
+  const W=900,H=285,L=52,R=18,T=22,B=42,iw=W-L-R,ih=H-T-B;
+  const max=opts.max??safeMax(series.flatMap(s=>s.values),1), min=opts.min??0;
+  const x=i=>labels.length<=1?L+iw/2:L+i*(iw/(labels.length-1));
+  const y=v=>T+ih-(num(v)-min)/(max-min||1)*ih;
+  let s=`<svg id="${esc(id)}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria||"Analytics chart")}">`;
+  for(let i=0;i<=4;i++){const v=min+(max-min)*i/4,yy=y(v);s+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="#e4e7ec" stroke-width="1"/> <text x="${L-8}" y="${yy+4}" text-anchor="end" font-size="10" fill="#667085">${esc(Math.round(v).toLocaleString("en-IN"))}</text>`;}
+  labels.forEach((lab,i)=>{if(labels.length<9||i%Math.ceil(labels.length/8)===0||i===labels.length-1)s+=`<text x="${x(i)}" y="${H-15}" text-anchor="middle" font-size="10" fill="#667085">${esc(String(lab).slice(5))}</text>`;});
+  series.forEach((ser,si)=>{
+    const pts=ser.values.map((v,i)=>`${x(i)},${y(v)}`).join(" ");
+    if(ser.fill){s+=`<polygon points="${L},${T+ih} ${pts} ${x(labels.length-1)},${T+ih}" fill="#dbeafe" opacity=".65"/>`;}
+    s+=`<polyline points="${pts}" fill="none" stroke="${ser.stroke||"#2563eb"}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
+    ser.values.forEach((v,i)=>{s+=`<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="#fff" stroke="${ser.stroke||"#2563eb"}" stroke-width="2"><title>${esc(ser.label)}: ${fmt(v)}</title></circle>`;});
+  });
+  s+="</svg>";
+  return s;
+}
+function barSvg(id,labels,values,opts={}){
+  const W=900,H=285,L=52,R=18,T=22,B=52,iw=W-L-R,ih=H-T-B,max=opts.max||safeMax(values,1),gap=12,n=Math.max(labels.length,1),bw=Math.max(10,(iw-gap*(n+1))/n);
+  let s=`<svg id="${esc(id)}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria||"Bar chart")}">`;
+  for(let i=0;i<=4;i++){const v=max*i/4,yy=T+ih-v/max*ih;s+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="#e4e7ec"/> <text x="${L-8}" y="${yy+4}" text-anchor="end" font-size="10" fill="#667085">${fmt(v)}</text>`;}
+  labels.forEach((lab,i)=>{const v=num(values[i]),h=v/max*ih,x=L+gap+i*(bw+gap),yy=T+ih-h;s+=`<rect x="${x}" y="${yy}" width="${bw}" height="${Math.max(h,1)}" rx="7" fill="${opts.fill||"#2563eb"}"><title>${esc(lab)}: ${fmt(v)}</title></rect><text x="${x+bw/2}" y="${H-16}" text-anchor="middle" font-size="10" fill="#667085">${esc(String(lab).slice(0,14))}</text>`;});
+  return s+"</svg>";
+}
+function donutSvg(id,labels,values){
+  const W=430,H=285,cx=215,cy=138,r=83,total=Math.max(values.reduce((a,v)=>a+num(v),0),1),colors=["#2563eb","#7c3aed","#12b76a","#f79009","#f04438","#06b6d4"];
+  let angle=-Math.PI/2,s=`<svg id="${esc(id)}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Platform distribution">`;
+  values.forEach((v,i)=>{const a2=angle+(num(v)/total)*Math.PI*2;const large=a2-angle>Math.PI?1:0;const x1=cx+r*Math.cos(angle),y1=cy+r*Math.sin(angle),x2=cx+r*Math.cos(a2),y2=cy+r*Math.sin(a2);s+=`<path d="M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} Z" fill="${colors[i%colors.length]}"><title>${esc(labels[i])}: ${fmt(v)}</title></path>`;angle=a2;});
+  s+=`<circle cx="${cx}" cy="${cy}" r="49" fill="#fff"/><text x="${cx}" y="${cy-3}" text-anchor="middle" font-size="13" font-weight="800" fill="#101828">Followers</text><text x="${cx}" y="${cy+16}" text-anchor="middle" font-size="11" fill="#667085">${fmt(total)}</text>`;
+  labels.forEach((l,i)=>{const yy=38+i*25;s+=`<rect x="18" y="${yy-8}" width="10" height="10" rx="3" fill="${colors[i%colors.length]}"/><text x="34" y="${yy}" font-size="11" fill="#475467">${esc(l)} • ${Math.round(num(values[i])/total*100)}%</text>`;});
+  return s+"</svg>";
+}
+function renderNav(){
+  document.getElementById("nav").innerHTML=NAV.map(([id,title])=>`<button type="button" data-page="${id}" class="${id===currentPage?"active":""}">${esc(title)}</button>`).join("");
+  document.querySelectorAll("#nav button").forEach(b=>b.addEventListener("click",()=>show(b.dataset.page)));
+}
+function show(id){
+  if(!NAV.some(x=>x[0]===id))id="dashboard";
+  currentPage=id;
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));
+  renderNav();
+  document.getElementById("crumb").textContent=NAV.find(x=>x[0]===id)[1];
+  document.getElementById("sidebar").classList.remove("open");
+  renderCurrent();
+}
+function renderCurrent(){
+  if(currentPage==="dashboard")renderDashboard();
+  if(currentPage==="sentiment")renderSentiment();
+  if(currentPage==="audience")renderAudience();
+  if(currentPage==="network")renderNetwork();
+  if(currentPage==="detailed")renderDetailed();
+  if(currentPage==="input")renderInput();
+}
+function renderDashboard(){
+  const latest=data.length?data[data.length-1]:null,totalEng=sum("likes")+sum("comments")+sum("shares"),avg=data.length?sum("positive")/data.length:0;
+  const topics={};data.forEach(x=>topics[x.topic]=(topics[x.topic]||0)+x.reach);
+  const sorted=Object.entries(topics).sort((a,b)=>b[1]-a[1]);
+  const platforms={};data.forEach(x=>platforms[x.platform]=(platforms[x.platform]||0)+engagement(x));
+  document.getElementById("dashboard").innerHTML=`
+  <div class="hero"><div class="eyebrow">SIH26152 • VALUE CODERS</div><h2>Social Media Analytics Command Center</h2><p>Unified analytics for sentiment, emerging trends, audience signals and influence/network relationships — based on the prototype dataset.</p></div>
+  <div class="section-title">Dashboard</div>
+  <div class="grid4">${card("Latest followers",latest?fmt(latest.followers):"0","Latest recorded value")}${card("Total reach",fmt(sum("reach")),"Across all records")}${card("Total engagement",fmt(totalEng),"Likes + comments + shares")}${card("Avg. positive sentiment",avg.toFixed(1)+"%","Across sample records")}</div>
+  <div class="grid2" style="margin-top:14px"><div class="card chart-card"><h3>Reach over time</h3><div class="chart">${chartSvg("reachChart",data.map(x=>x.date),[{label:"Reach",values:data.map(x=>x.reach),fill:true} ],{aria:"Reach over time"})}</div></div>
+  <div class="card chart-card"><h3>Engagement by platform</h3><div class="chart">${barSvg("engChart",Object.keys(platforms),Object.values(platforms),{aria:"Engagement by platform"})}</div></div></div>
+  <div class="card" style="margin-top:14px"><h3>Top topics by reach</h3>${sorted.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Topic</th><th>Reach</th><th>Share of total</th></tr></thead><tbody>${sorted.map(([k,v])=>`<tr><td><span class="pill">${esc(k)}</span></td><td>${fmt(v)}</td><td>${sum("reach")?((v/sum("reach"))*100).toFixed(1):"0.0"}%</td></tr>`).join("")}</tbody></table></div>`:empty("No data available.")}</div>`;
+}
+function renderSentiment(){
+  const topic={};data.forEach(x=>{if(!topic[x.topic])topic[x.topic]={mentions:0,reach:0};topic[x.topic].mentions++;topic[x.topic].reach+=x.reach;});
+  document.getElementById("sentiment").innerHTML=`
+  <div class="section-title">Sentiment & Trends</div><div class="section-sub">Track positive, negative and neutral signals over the available timeline.</div>
+  <div class="card chart-card"><h3>Sentiment trend (%)</h3><div class="chart">${chartSvg("sentChart",data.map(x=>x.date),[{label:"Positive",values:data.map(x=>x.positive),stroke:"#12b76a"},{label:"Negative",values:data.map(x=>x.negative),stroke:"#f04438"},{label:"Neutral",values:data.map(x=>x.neutral),stroke:"#667085"}],{max:100,aria:"Sentiment trend"})}</div><div class="legend"><span class="positive">● Positive</span> &nbsp; <span class="negative">● Negative</span> &nbsp; <span class="neutral">● Neutral</span></div></div>
+  <div class="card" style="margin-top:14px"><h3>Emerging topics</h3><div class="table-wrap"><table class="table"><thead><tr><th>Topic</th><th>Mentions</th><th>Reach</th></tr></thead><tbody>${Object.entries(topic).sort((a,b)=>b[1].reach-a[1].reach).map(([k,v])=>`<tr><td><span class="pill">${esc(k)}</span></td><td>${v.mentions}</td><td>${fmt(v.reach)}</td></tr>`).join("")||`<tr><td colspan="3">No data.</td></tr>`}</tbody></table></div></div>
+  <div class="card chart-card" style="margin-top:14px"><h3>Timeline reach</h3><div class="chart">${barSvg("timeChart",data.map(x=>x.date),data.map(x=>x.reach),{aria:"Timeline reach"})}</div></div>`;
+}
+function renderAudience(){
+  const followersByPlatform={};data.forEach(x=>followersByPlatform[x.platform]=Math.max(followersByPlatform[x.platform]||0,x.followers));
+  document.getElementById("audience").innerHTML=`
+  <div class="section-title">Audience Insights</div><div class="section-sub">Prototype audience view using the supplied sample profile. Demographic categories can connect to approved datasets later.</div>
+  <div class="info">Audience profile: <b>18–24</b> primary age group • <b>India</b> top region • <b>Evening</b> active period. These prototype attributes are illustrative and are not inferred from the supplied records.</div>
+  <div class="grid3">${card("Primary age group","18–24","Prototype profile")}${card("Top region","India","Prototype profile")}${card("Active period","Evening","Prototype profile")}</div>
+  <div class="grid2" style="margin-top:14px"><div class="card chart-card"><h3>Audience profile</h3><div class="chart">${barSvg("demoChart",["13–17","18–24","25–34","35–44","45+"],[12,38,29,14,7],{aria:"Audience profile",max:40})}</div></div>
+  <div class="card chart-card"><h3>Platform distribution</h3><div class="chart">${donutSvg("platformChart",Object.keys(followersByPlatform),Object.values(followersByPlatform))}</div></div></div>`;
+}
+function renderNetwork(){
+  const pos={brand:[50,16],a:[25,39],b:[75,39],news:[83,68],community:[17,68],audience:[50,87]};
+  const names={brand:["Brand","92"],a:["Creator A","84"],b:["Creator B","77"],news:["News Page","69"],community:["Community","61"],audience:["Audience","—"]};
+  const edges=[["brand","a"],["brand","b"],["a","community"],["b","news"],["news","audience"],["community","audience"]];
+  const lines=edges.map(([a,b])=>{const A=pos[a],B=pos[b];return `<line x1="${A[0]}%" y1="${A[1]}%" x2="${B[0]}%" y2="${B[1]}%" stroke="#93b4ff" stroke-width="1.8" stroke-dasharray="5 4"/>`;}).join("");
+  const nodes=Object.entries(pos).map(([k,v])=>`<div class="node" style="left:${v[0]}%;top:${v[1]}%">${esc(names[k][0])}<small>${names[k][1]==="—"?"Target node":"Influence "+names[k][1]}</small></div>`).join("");
+  const ranks=[["Brand",92],["Creator A",84],["Creator B",77],["News Page",69],["Community",61]];
+  document.getElementById("network").innerHTML=`
+  <div class="section-title">Influence & Network</div><div class="section-sub">Illustrative relationship map carried forward from the prototype concept.</div>
+  <div class="card"><div class="network-wrap"><svg class="network-svg" viewBox="0 0 100 100" preserveAspectRatio="none">${lines}</svg>${nodes}</div><div class="legend">Network visualization is an illustrative prototype based on sample relationships; it is not a live social graph.</div></div>
+  <div class="card" style="margin-top:14px"><h3>Influential nodes</h3><div class="table-wrap"><table class="table"><thead><tr><th>Node</th><th>Influence score</th><th>Relative strength</th></tr></thead><tbody>${ranks.map(([n,s])=>`<tr><td><b>${esc(n)}</b></td><td>${s}</td><td style="min-width:180px"><div class="score"><i style="width:${s}%"></i></div></td></tr>`).join("")}</tbody></table></div></div>`;
+}
+function renderDetailed(){
+  const topics=[...new Set(data.map(x=>x.topic))],plats=[...new Set(data.map(x=>x.platform))];
+  document.getElementById("detailed").innerHTML=`
+  <div class="topbar"><div><div class="section-title">Detailed Analysis</div><div class="section-sub">Analyst drill-down with topic and platform filters.</div></div><div class="filters"><select class="select" id="topicSel"><option value="All">All topics</option>${topics.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("")}</select><select class="select" id="platSel"><option value="All">All platforms</option>${plats.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("")}</select></div></div>
+  <div id="detailBody"></div>`;
+  document.getElementById("topicSel").addEventListener("change",renderDetailBody);
+  document.getElementById("platSel").addEventListener("change",renderDetailBody);
+  renderDetailBody();
+}
+function renderDetailBody(){
+  const t=document.getElementById("topicSel")?.value||"All",p=document.getElementById("platSel")?.value||"All";
+  const f=data.filter(x=>(t==="All"||x.topic===t)&&(p==="All"||x.platform===p));
+  const el=document.getElementById("detailBody");if(!el)return;
+  el.innerHTML=`
+  <div class="grid3">${card("Reach",fmt(sum("reach",f)),"Filtered")}${card("Likes",fmt(sum("likes",f)),"Filtered")}${card("Comments",fmt(sum("comments",f)),"Filtered")}</div>
+  <div class="card" style="margin-top:14px"><h3>Selected records (${f.length})</h3><div class="table-wrap"><table class="table"><thead><tr><th>Date</th><th>Platform</th><th>Topic</th><th>Followers</th><th>Reach</th><th>Likes</th><th>Comments</th><th>Shares</th></tr></thead><tbody>${f.map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.platform)}</td><td>${esc(x.topic)}</td><td>${fmt(x.followers)}</td><td>${fmt(x.reach)}</td><td>${fmt(x.likes)}</td><td>${fmt(x.comments)}</td><td>${fmt(x.shares)}</td></tr>`).join("")||`<tr><td colspan="8">${empty("No matching records.")}</td></tr>`}</tbody></table></div></div>
+  <div class="card chart-card" style="margin-top:14px"><h3>Filtered reach timeline</h3><div class="chart">${barSvg("detailChart",f.map(x=>x.date),f.map(x=>x.reach),{aria:"Filtered reach timeline"})}</div></div>`;
+}
+function renderInput(){
+  const rows=data.map((x,i)=>`<tr><td>${esc(x.date)}</td><td>${esc(x.platform)}</td><td>${fmt(x.followers)}</td><td>${fmt(x.reach)}</td><td>${fmt(x.likes)}</td><td>${fmt(x.comments)}</td><td>${fmt(x.shares)}</td><td>${esc(x.topic)}</td><td><button class="btn danger" type="button" data-delete="${i}">Delete</button></td></tr>`).join("");
+  const today=new Date().toISOString().slice(0,10);
+  document.getElementById("input").innerHTML=`
+  <div class="section-title">Data Input</div><div class="section-sub">Add records to the analytics dataset. New records are persisted in localStorage on this device.</div>
+  <div class="card"><form id="dataForm"><div class="form-grid">
+  <div class="field"><label for="date">Date</label><input class="input" id="date" type="date" required value="${today}"></div>
+  <div class="field"><label for="platform">Platform</label><select class="input" id="platform"><option>Instagram</option><option>YouTube</option><option>Facebook</option><option>X</option></select></div>
+  <div class="field"><label for="followers">Followers</label><input class="input" id="followers" type="number" min="0" step="1" required value="1000"></div>
+  <div class="field"><label for="reach">Reach</label><input class="input" id="reach" type="number" min="0" step="1" required value="5000"></div>
+  <div class="field"><label for="likes">Likes</label><input class="input" id="likes" type="number" min="0" step="1" required value="300"></div>
+  <div class="field"><label for="comments">Comments</label><input class="input" id="comments" type="number" min="0" step="1" required value="30"></div>
+  <div class="field"><label for="shares">Shares</label><input class="input" id="shares" type="number" min="0" step="1" required value="50"></div>
+  <div class="field"><label for="topic">Topic</label><input class="input" id="topic" type="text" required value="Product"></div>
+  </div><div class="actions"><button class="btn" type="submit">＋ Add data</button><button class="btn secondary" id="resetData" type="button">Reset sample data</button><button class="btn secondary" id="downloadCsv" type="button">Download CSV</button></div></form></div>
+  <div class="card" style="margin-top:14px"><h3>Current dataset • ${data.length} records</h3><div class="table-wrap"><table class="table"><thead><tr><th>Date</th><th>Platform</th><th>Followers</th><th>Reach</th><th>Likes</th><th>Comments</th><th>Shares</th><th>Topic</th><th>Action</th></tr></thead><tbody>${rows||`<tr><td colspan="9">${empty("No records.")}</td></tr>`}</tbody></table></div></div>`;
+  document.getElementById("dataForm").addEventListener("submit",addRecord);
+  document.getElementById("resetData").addEventListener("click",resetData);
+  document.getElementById("downloadCsv").addEventListener("click",downloadCSV);
+  document.querySelectorAll("[data-delete]").forEach(b=>b.addEventListener("click",()=>deleteRecord(Number(b.dataset.delete))));
+}
+function addRecord(e){
+  e.preventDefault();const get=id=>document.getElementById(id).value;
+  const r={date:get("date"),platform:get("platform"),followers:num(get("followers")),reach:num(get("reach")),likes:num(get("likes")),comments:num(get("comments")),shares:num(get("shares")),positive:60,negative:20,neutral:20,topic:get("topic").trim()||"Product"};
+  data.push(r);data.sort((a,b)=>a.date.localeCompare(b.date));saveData();renderCurrent();showToast("Record added and saved locally.");
+}
+function resetData(){if(!confirm("Reset the dataset to the original sample records?"))return;data=cloneSample();saveData();renderCurrent();showToast("Sample data restored.");}
+function deleteRecord(i){if(i<0||i>=data.length)return;if(!confirm("Delete this record?"))return;data.splice(i,1);saveData();renderCurrent();showToast("Record deleted.");}
+function csvCell(v){return `"${String(v??"").replace(/"/g,'""')}"`;}
+function downloadCSV(){
+  const headers=["date","platform","followers","reach","likes","comments","shares","positive","negative","neutral","topic"];
+  const csv=[headers.join(","),...data.map(x=>headers.map(h=>csvCell(x[h])).join(","))].join("\r\n");
+  const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="social_media_analytics_data.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);
+}
+document.getElementById("mobileToggle").addEventListener("click",()=>document.getElementById("sidebar").classList.toggle("open"));
+renderNav();
+show("dashboard");
+</script>
+</body>
+</html>
